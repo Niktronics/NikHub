@@ -38,14 +38,12 @@ Input input(ts);
 NotificationLayer notification(tft);
 EnviromentService enviromentService(timeClient);
 
-// crea i menu con riferimento al TFT e servizi
 MainMenu mainMenu(tft, enviromentService, notification);
 OthersMenu othersMenu(tft);
 PaletteMenu paletteMenu(tft);
 GamesMenu gamesMenu(tft);
 SnakeGame snakeGame(tft);
 
-// menu manager prende i riferimenti
 MenuManager menuManager(tft, input, notification, mainMenu, othersMenu, paletteMenu, gamesMenu, snakeGame);
 
 
@@ -74,4 +72,5 @@ void setup() {
 
 void loop() {
     menuManager.update();
+
 }
